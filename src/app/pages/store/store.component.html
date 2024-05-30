@@ -1,0 +1,13 @@
+<content-wrapper [title]="title">
+  <ng-container *ngIf="isLoading">
+    <spinner></spinner>
+  </ng-container>
+
+  <ng-container *ngIf="!isLoading">
+    <router-outlet></router-outlet>
+  </ng-container>
+
+  <ng-container *ngIf="!isActiveRoute">
+    <not-found-page [title]="title"></not-found-page>
+  </ng-container>
+</content-wrapper>

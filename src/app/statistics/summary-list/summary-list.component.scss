@@ -1,0 +1,6 @@
+@import "main";
+
+.main-content__summary-list {
+  @include grid(3);
+  gap: 17px;
+}

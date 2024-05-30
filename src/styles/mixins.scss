@@ -1,0 +1,23 @@
+@mixin box-shadow($top, $right, $bottom, $left, $type, $color) {
+  box-shadow: $top+px $right+px $bottom+px $left+px $type $color;
+}
+
+@mixin flexbox($direction: column, $align: center, $justify: space-between) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin font($color, $family, $size, $weight, $height) {
+  color: $color;
+  font-family: $family;
+  font-size: $size+px;
+  font-weight: $weight;
+  line-height: #{$height}+'%';
+}

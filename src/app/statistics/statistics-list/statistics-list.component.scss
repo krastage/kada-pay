@@ -1,0 +1,7 @@
+@import "main";
+
+.main-content__statistics-list {
+  @include grid(4);
+  gap: 17px;
+  margin-top: 40px;
+}

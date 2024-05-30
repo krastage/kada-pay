@@ -1,0 +1,8 @@
+@import "main";
+
+.main-logo {
+  @include font($white-main-color, $inter-regular-font, 48, 900, 0);
+  line-height: 58px;
+  user-select: none;
+  text-align: left;
+}

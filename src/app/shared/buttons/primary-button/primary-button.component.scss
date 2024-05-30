@@ -1,0 +1,12 @@
+@import "main";
+
+.login-form__button {
+  @include box-shadow(0, 2, 12, 0, null, $box-shadow-black-color);
+  @include flexbox(column, center, null);
+  @include font($white-main-color, $inter-regular-font, 16, 500, 100);
+  border-radius: 5px;
+  background: $main-color;
+  width: 100%;
+  margin-top: 17px;
+  padding: 8px 180px;
+}

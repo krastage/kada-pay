@@ -1,0 +1,29 @@
+@import 'main';
+
+.not-found-page {
+  @include flexbox(column, center, null);
+  @include font($main-color, $inter-bold-font, 24, 900, 150);
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  user-select: none;
+  min-width: 470px;
+}
+
+.not-found-page__title {
+  @include font($main-color, $inter-bold-font, 63, 900, 150);
+}
+
+.not-found-page__info {
+  @include flexbox(row, center, space-between);
+}
+
+.not-found-page__info-text {
+  @include font($main-color, $inter-bold-font, 30, 900, 150);
+}
+
+.not-found-page__info-timer {
+  @include font($main-color, $inter-bold-font, 30, 900, 150);
+  text-align: center;
+  width: 25px;
+}

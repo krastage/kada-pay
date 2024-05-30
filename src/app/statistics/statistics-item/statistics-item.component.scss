@@ -1,0 +1,46 @@
+@import 'main';
+
+.product-list__item {
+  @include flexbox(column, null, null);
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  @include box-shadow(0, 2, 12, 0, null, $line-color);
+  transition: 0.7s box-shadow ease;
+
+  &:hover {
+    @include box-shadow(1, 3, 3, 2, null, $line-color);
+  }
+}
+
+.item-title {
+  @include font($main-color, $inter-bold-font, 16, 150, null);
+  margin-left: 10px;
+}
+
+.item-line {
+  width: 305px;
+  border: 1px solid $line-color;
+}
+
+.product-info {
+  @include flexbox(null, center, space-between);
+  padding: 0 11px 0 11px;
+}
+
+.product-info-content {
+  @include flexbox(column, null, null);
+  gap: 5px;
+}
+
+.product-info__title {
+  @include font($input-placeholder-color, $inter-regular-font, 12, 400, null);
+}
+
+.product-info__requests {
+  @include font($input-placeholder-color, $inter-regular-font, 20, 700, null);
+}
+
+.product-info__amount {
+  @include font($box-shadow-green-color, $inter-bold-font, 20, 700, null);
+}

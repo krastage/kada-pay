@@ -1,0 +1,28 @@
+@import "main";
+
+body {
+  margin: 0 auto;
+  background-image: url("./assets/img/background.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  min-height: 908px;
+}
+
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+  stroke: $main-color !important;
+}
+
+.mock {
+  @include flexbox(column, center, null);
+  @include font($main-color, $inter-bold-font, 24, 900, 150);
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  user-select: none;
+  min-width: 470px;
+}

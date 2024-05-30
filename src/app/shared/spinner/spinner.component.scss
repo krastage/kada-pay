@@ -1,0 +1,8 @@
+@import "main";
+
+.main-loading {
+  @include font($main-color, $inter-bold-font, 24, 900, 150);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

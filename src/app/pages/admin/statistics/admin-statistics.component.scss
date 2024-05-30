@@ -1,0 +1,11 @@
+@import "main";
+
+.main-content__title {
+  @include font($main-color, $inter-bold-font, 28, 900, 34);
+  user-select: none;
+}
+
+.statistics-content {
+  @include flexbox(column, null, space-between);
+  height: 100%;
+}

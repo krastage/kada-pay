@@ -1,0 +1,20 @@
+<header class="main-header">
+  <main-logo></main-logo>
+
+  <form
+    (ngSubmit)="onSubmit()"
+    class="main-header-form">
+    <input
+      type="text"
+      placeholder="Заявка"
+      class="main-header-form__input"
+      [(ngModel)]="inputData"
+      name="input"
+    />
+    <button type="submit" class="main-header-form__button">
+      <img ngSrc="assets/img/search.svg" class="main-header-form__button-logo" height="24" width="24"  alt=""/>
+    </button>
+  </form>
+
+  <h3 class="main-header-account">Привет, Иван Иванов!</h3>
+</header>

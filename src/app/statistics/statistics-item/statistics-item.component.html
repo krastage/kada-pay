@@ -1,0 +1,15 @@
+<li class="product-list__item">
+  <h3 class="item-title">{{ data.title }}</h3>
+  <div class="item-line"></div>
+
+  <ng-container *ngFor="let period of getPeriods(data); let i = index">
+    <div class="product-info">
+      <div class="product-info-content">
+        <h4 class="product-info__title">{{ period.title }}</h4>
+        <span class="product-info__requests">{{ period.requests }} заявок</span>
+      </div>
+      <span class="product-info__amount">{{ period.amount }} ₽</span>
+    </div>
+    <div class="item-line" *ngIf="i < getPeriods(data).length - 1"></div>
+  </ng-container>
+</li>

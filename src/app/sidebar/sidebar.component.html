@@ -1,0 +1,38 @@
+<nav *ngIf="primaryLinks && secondaryLinks" class="main-sidebar">
+  <h2 class="main-sidebar-title">Личный кабинет</h2>
+  <div class="main-sidebar-list container">
+    <ul class="main-sidebar-list-top">
+      <li *ngFor="let route of primaryLinks">
+        <a
+          [routerLink]="route.path"
+          routerLinkActive="link-active"
+          class="main-sidebar__element"
+        >
+          <img
+            *ngIf="getIcon(route.icon)"
+            [src]="getIcon(route.icon)"
+            [alt]="route.icon"
+          />
+          {{ route.label }}
+        </a>
+      </li>
+    </ul>
+
+    <ul class="main-sidebar-list-bottom">
+      <li *ngFor="let route of secondaryLinks">
+        <a
+          [routerLink]="route.path"
+          routerLinkActive="link-active"
+          class="main-sidebar__element"
+        >
+          <img
+            *ngIf="getIcon(route.icon)"
+            [src]="getIcon(route.icon)"
+            [alt]="route.icon"
+          />
+          {{ route.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,54 @@
+@import "main";
+
+.main-header {
+  @include flexbox(null, center, null);
+  padding: 40px 41px 0 40px;
+}
+
+.main-header-form {
+  @include flexbox(null, center, center);
+  position: relative;
+}
+
+.main-header-form__input {
+  @include box-shadow(0, 0, 0, 2, inset, $white-main-color);
+  @include font($input-placeholder-color, $inter-regular-font, 18, 400, 22);
+  padding: 12px;
+  margin-left: 91px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  width: 774px;
+  height: 46px;
+  transition: color 1s ease;
+
+  &::placeholder {
+    user-select: none;
+  }
+
+  &:focus,
+  &:focus::placeholder {
+    @include font($white-main-color, $inter-regular-font, 18, 400, 22);
+    background-color: rgba(0, 0, 0, 0);
+    transition: color 0.5s ease;
+  }
+}
+
+.main-header-form__button {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  transition: stroke 0.5s ease;
+
+  &:hover {
+    * {
+      transition: stroke 0.5s ease;
+      stroke: $input-placeholder-color;
+    }
+  }
+}
+
+.main-header-account {
+  @include font($white-main-color, $inter-bold-font, 18, 900, 22);
+  margin-left: auto;
+}

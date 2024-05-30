@@ -1,0 +1,58 @@
+@import "main";
+
+.main-sidebar {
+  @include flexbox(column, null, null);
+  gap: 30px;
+  margin: 30px 0 40px 0;
+  min-width: 248px;
+  height: 100%;
+}
+
+.main-sidebar-title {
+  @include font($input-placeholder-color, $inter-bold-font, 20, 700, 150);
+  user-select: none;
+}
+
+.main-sidebar-list {
+  @include flexbox(column, null, space-between);
+  user-select: none;
+  height: 100%;
+
+}
+
+.main-sidebar-list-top {
+  @include flexbox(column, null, center);
+  gap: 22px;
+}
+
+.main-sidebar-list-bottom {
+  @include flexbox(column, null, center);
+  gap: 22px;
+  margin-bottom: 120px;
+}
+
+.main-sidebar__element {
+  @include flexbox(null, center, null);
+  @include font($white-main-color, $inter-regular-font, 16, 300, 19);
+  gap: 20px;
+  transition: color 0.3s ease;
+  min-width: 251px;
+
+  &.link-active {
+    @include font($box-shadow-green-color, $inter-regular-font, 16, 300, 19);
+
+    &:hover {
+      @include font($box-shadow-green-color, $inter-regular-font, 16, 300, 19);
+    }
+  }
+
+  &:hover {
+    svg {
+      stroke: $input-placeholder-color;
+      transition: stroke 0.3s ease;
+    }
+
+    color: $input-placeholder-color;
+    transition: color 0.3s ease;
+  }
+}

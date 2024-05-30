@@ -1,0 +1,15 @@
+@import "main";
+
+.content {
+  display: flex;
+  padding: 40px;
+}
+
+.main-content {
+  width: 100%;
+  border-radius: 30px;
+  margin-left: 50px;
+  padding: 40px;
+  background: $white-main-color;
+  position: relative;
+}

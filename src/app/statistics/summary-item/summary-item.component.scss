@@ -1,0 +1,26 @@
+@import "main";
+
+.summary-list__item {
+  @include flexbox(null, center, space-between);
+  @include box-shadow(0, 2, 12, 0, null, $box-shadow-black-color);
+  border: 1px solid $box-shadow-green-color;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.summary-list-content {
+  @include flexbox(column, null, null);
+  gap: 10px;
+}
+
+.summary-list__title {
+  @include font($main-color, $inter-bold-font, 16, 700, null);
+}
+
+.summary-list__info {
+  @include font($input-placeholder-color, $inter-regular-font, 12, 400, null);
+}
+
+.summary-list__amount {
+  @include font($main-color, $inter-bold-font, 20, 700, null);
+}

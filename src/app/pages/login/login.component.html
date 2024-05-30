@@ -1,0 +1,53 @@
+<main class="login-page">
+  <div class="login-page__items">
+    <main-logo></main-logo>
+
+    <form (ngSubmit)="onSubmit()" class="login-form" #loginForm="ngForm">
+      <h2 class="login-form__title">Вход на платформу</h2>
+
+      <div class="login-form__inputs">
+        <div class="login-form__input">
+          <label for="login" class="input-label">
+            Адрес электронной почты
+          </label>
+          <input
+            type="text"
+            placeholder="example@gmail.com"
+            id="login"
+            class="login-form__login-input"
+            name="email"
+            [(ngModel)]="loginData.email"
+            required
+            email
+            #email="ngModel"
+          />
+        </div>
+
+        <div class="login-form__input">
+          <label for="password" class="input-label">
+            Пароль
+          </label>
+          <input
+            type="password"
+            placeholder="••••••••••••••••"
+            id="password"
+            class="login-form__password-input"
+            name="password"
+            [(ngModel)]="loginData.password"
+            required
+            minlength="8"
+            #password="ngModel"
+          />
+        </div>
+      </div>
+
+      <primary-button
+        [label]="'Войти'"
+        [className]="'login-form__button'"
+      ></primary-button>
+
+      <a class="login-form__reset-link">Проблемы со входом и доступом?</a>
+    </form>
+
+  </div>
+</main>
